@@ -5,8 +5,8 @@ import Image from "next/image";
 
 export default function AboutPage() {
   const skills = [
-    "HTML", "CSS", "JavaScript", "React", "Next.js", 
-    "Node.js", "MongoDB", "TailwindCSS", "Git/GitHub"
+    "HTML","JavaScript","python","React", "Next.js", 
+    "Node.js", "MongoDB", "Git/GitHub"
   ];
 
   const education = [
@@ -14,12 +14,12 @@ export default function AboutPage() {
       title: "B.Tech in Computer Engineering",
       institution: "PCCOE Pimpri Chinchwad College of Engineering",
       period: "2024–2028",
-      description: "Pursuing Computer Engineering with focus on web technologies and software development."
+      description: "I'm currently Pursuing Computer Engineering at PCCOE"
     },
     {
       title: "Junior Webmaster",
       institution: "CESA SDW ACM",
-      period: "2025 (present)",
+      period: "2025",
       description: "Currently working as Junior Webmaster, managing and developing web solutions for the organization."
     }
   ];
@@ -87,7 +87,7 @@ export default function AboutPage() {
               About Me
             </h1>
             <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
-              Get to know me better - my journey, skills, and passion for web development
+              Get to know me better - my journey, skills
             </p>
           </motion.div>
 
@@ -132,13 +132,13 @@ export default function AboutPage() {
                   variants={itemVariants}
                   className="text-lg sm:text-xl leading-relaxed text-slate-600 dark:text-slate-400"
                 >
-                  I am currently a Junior Webmaster at CESA SDW ACM. I am passionate about web design and continuously improving my skills to create engaging, user-friendly experiences.
+                  I am a passionate and dedicated student of Computer Engineering at PCCOE. I am a quick learner and always looking for new challenges and opportunities to grow.
                 </motion.p>
                 <motion.p 
                   variants={itemVariants}
                   className="text-lg leading-relaxed text-slate-600 dark:text-slate-400"
                 >
-                  My journey in web development started with curiosity and has evolved into a passion for creating digital solutions that make a difference. I believe in continuous learning and staying updated with the latest technologies and best practices.
+                  My journey started with curiosity and has evolved into a passion for creating digital solutions that make a difference. I believe in continuous learning and staying updated with the latest technologies and best practices.
                 </motion.p>
               </div>
             </motion.div>

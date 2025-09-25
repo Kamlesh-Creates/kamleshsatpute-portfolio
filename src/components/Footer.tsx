@@ -96,7 +96,7 @@ export default function Footer() {
                   Kamlesh Satpute
                 </h3>
                 <p className="text-slate-300 leading-relaxed max-w-md">
-                  A passionate Full Stack Developer and Web Designer, currently working as a Junior Webmaster at CESA SDW ACM. Dedicated to creating engaging digital experiences.
+                  A passionate BTech CS student at PCCOE, currently working as a Junior Webmaster at CESA SDW ACM. Dedicated to creating engaging digital experiences.
                 </p>
               </div>
               

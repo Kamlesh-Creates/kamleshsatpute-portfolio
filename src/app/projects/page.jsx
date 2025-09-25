@@ -66,7 +66,7 @@ export default function ProjectsPage() {
               My Projects
             </h1>
             <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
-              A collection of projects that showcase my skills and passion for web development
+              A collection of projects that showcase my skills and passion for coding
             </p>
           </motion.div>
 

@@ -7,7 +7,7 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 export default function HomePage() {
   const [text] = useTypewriter({
-    words: ["Full Stack Developer", "Web Designer"],
+    words: ["BTech CS student at PCCOE"],
     loop: true,
     typeSpeed: 100,
     deleteSpeed: 50,
@@ -82,7 +82,7 @@ export default function HomePage() {
                   transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
                   className="text-base sm:text-lg lg:text-xl leading-relaxed text-slate-600 dark:text-slate-400 mb-8 sm:mb-12 max-w-2xl"
                 >
-                 I am currently working as a Junior Webmaster at CESA SDW ACM.I am passionate about web design and continuously enhancing my skills to create engaging, user-friendly, and impactful digital experiences. My focus is on learning, experimenting, and improving as I grow in the field of web development and design.
+                 I am currently working as a Junior Webmaster at CESA SDW ACM.I am passionate about coding and continuously enhancing my skills to create engaging, user-friendly, and impactful digital experiences. My focus is on learning, experimenting, and improving as I grow in the field of coding and design.
                 </motion.p>
 
                 {/* Enhanced CTA buttons */}
@@ -251,7 +251,7 @@ export default function HomePage() {
                       </h3>
                     </div>
                     <p className="text-slate-600 dark:text-slate-400 text-center leading-relaxed mb-6 text-sm sm:text-base">
-                      Learn about my journey, skills, and passion for web development. Discover my educational background and current role as a Junior Webmaster.
+                      Learn about my journey, skills. Discover my educational background and current role as a Junior Webmaster.
                     </p>
                     <div className="flex items-center justify-center text-blue-600 dark:text-blue-400 font-semibold group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300 text-sm sm:text-base">
                       <span>Learn More</span>
