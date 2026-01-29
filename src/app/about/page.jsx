@@ -5,11 +5,17 @@ import Image from "next/image";
 
 export default function AboutPage() {
   const skills = [
-    "HTML","JavaScript","python","React", "Next.js", 
+    "JavaScript","python","C++","React", "Next.js", 
     "Node.js", "MongoDB", "Git/GitHub"
   ];
 
   const education = [
+    {
+      title: "Junior College",
+      institution: "Fergusson College (Autonomous), Pune",
+      period: "2022–2024",
+      description: "Completed my Junior College education at Fergusson College, one of the most prestigious institutions in Pune."
+    },
     {
       title: "B.Tech in Computer Engineering",
       institution: "PCCOE Pimpri Chinchwad College of Engineering",
@@ -19,7 +25,7 @@ export default function AboutPage() {
     {
       title: "Junior Webmaster",
       institution: "CESA SDW ACM",
-      period: "2025",
+      period: "2025-2026",
       description: "Currently working as Junior Webmaster, managing and developing web solutions for the organization."
     }
   ];
@@ -199,34 +205,53 @@ export default function AboutPage() {
 
             <motion.div 
               variants={itemVariants}
-              className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+              className="max-w-4xl mx-auto"
             >
-              {education.map((item, index) => (
-                <motion.div
-                  key={index}
-                  variants={itemVariants}
-                  whileHover={{ y: -5 }}
-                  transition={{ duration: 0.3 }}
-                  className="group"
-                >
-                  <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm border border-slate-200 dark:border-slate-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 h-full">
-                    <div className="flex items-start justify-between mb-4">
-                      <h3 className="text-xl font-semibold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
-                        {item.title}
-                      </h3>
-                      <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300">
-                        {item.period}
-                      </span>
-                    </div>
-                    <p className="text-slate-600 dark:text-slate-400 font-medium mb-3">
-                      {item.institution}
-                    </p>
-                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                      {item.description}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
+              {/* Timeline Container */}
+              <div className="relative">
+                {/* Vertical Line */}
+                <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-400 via-indigo-500 to-purple-500 dark:from-blue-500 dark:via-indigo-600 dark:to-purple-600" />
+                
+                {education.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    variants={itemVariants}
+                    className="relative mb-12 last:mb-0"
+                  >
+                    {/* Timeline dot */}
+                    <div className="absolute left-8 md:left-1/2 w-4 h-4 -ml-2 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 dark:from-blue-400 dark:to-indigo-500 shadow-lg ring-4 ring-white dark:ring-slate-900 z-10" />
+                    
+                    {/* Content Card - Alternating sides on desktop */}
+                    <motion.div
+                      whileHover={{ scale: 1.02, x: index % 2 === 0 ? -5 : 5 }}
+                      transition={{ duration: 0.3 }}
+                      className={`ml-20 md:ml-0 md:w-[calc(50%-3rem)] ${
+                        index % 2 === 0 ? 'md:mr-auto md:pr-12' : 'md:ml-auto md:pl-12'
+                      } group`}
+                    >
+                      <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm border border-slate-200 dark:border-slate-700 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300">
+                        <div className="flex items-start justify-between mb-4 flex-wrap gap-2">
+                          <h3 className="text-xl font-semibold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                            {item.title}
+                          </h3>
+                          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-blue-100 to-indigo-100 dark:from-blue-900/30 dark:to-indigo-900/30 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800">
+                            {item.period}
+                          </span>
+                        </div>
+                        <p className="text-slate-600 dark:text-slate-400 font-medium mb-3 flex items-center gap-2">
+                          <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                          </svg>
+                          {item.institution}
+                        </p>
+                        <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                          {item.description}
+                        </p>
+                      </div>
+                    </motion.div>
+                  </motion.div>
+                ))}
+              </div>
             </motion.div>
           </motion.section>
 

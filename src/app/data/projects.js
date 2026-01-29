@@ -3,7 +3,7 @@ export const projects = [
     id: 1,
     title: "Food Delivery Platform",
     description: "A full-stack Delivery application built with modern web technologies. Features include user authentication, product management, shopping cart, and payment integration.",
-    techStack: ["Next.js", "Node.js", "MongoDB", "Express", "bootstrap"],
+    techStack: ["Next.js", "Node.js", "MongoDB", "Express", "Bootstrap"],
     liveDemo: "https://next-quickserve.vercel.app/",
     github: "https://github.com/Kamlesh-Creates/nextjs-food-delivery"
   },
@@ -27,7 +27,7 @@ export const projects = [
     id: 4,
     title: "Ananya 2025 Event",
     description: "Ananya 2025 Event Website for PCCOE.",
-    techStack: ["Typescript", "Next.js", "TailwindCSS", "TailwindUI", "MongoDB"],
+    techStack: ["Typescript", "Next.js", "TailwindCSS", "MongoDB"],
     liveDemo: "https://anatya2025event.vercel.app/",
     github: "https://github.com/Kamlesh-Creates/anatya2025event"
   },
@@ -39,5 +39,21 @@ export const projects = [
     liveDemo: "",
     github: ""
   },
+
+  {
+  id: 6,
+  title: "Smart Timetable Scheduler",
+  description: "An intelligent institute timetable system that automatically generates division-wise schedules with batch-wise lab allocation, admin management, and printable timetable exports.",
+  techStack: [
+    "Next.js",
+    "Fast-api",
+    "Tailwind CSS",
+    "MongoDB",
+    "Python (OR-Tools)"
+  ],
+  liveDemo: "https://timetable-indol-pi.vercel.app/admin/login",
+  github: "https://github.com/Kamlesh-Creates/Timetable"
+}
+
  
 ];
