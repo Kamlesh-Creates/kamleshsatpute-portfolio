@@ -1,6 +1,15 @@
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Initialize Resend only at runtime with the API key
+let resend;
+
+// This will be called only at request time, not during build
+function getResendClient() {
+  if (!resend) {
+    resend = new Resend(process.env.RESEND_API_KEY);
+  }
+  return resend;
+}
 
 export async function POST(request) {
   try {
@@ -23,8 +32,11 @@ export async function POST(request) {
       );
     }
 
+    // Get Resend client at runtime
+    const resendClient = getResendClient();
+
     // Send email to your Gmail using Resend's verified domain
-    const emailResult = await resend.emails.send({
+    const emailResult = await resendClient.emails.send({
       from: 'Portfolio Contact <onboarding@resend.dev>', // Using Resend's verified domain
       to: ['kamlesh.satpute24@pccoepune.org'], // Your Gmail address
       subject: `New Portfolio Message from ${name}`,
